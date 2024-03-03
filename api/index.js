@@ -10,6 +10,13 @@ import cors from "cors";
 
 const app = express();
 
+app.use(cors(
+    {
+        origin: ["https://deploy-mern-1whq.vercel.app"],
+        methods: ["POST","GET"],
+        credentials : true
+    }
+));
 dotenv.config()
 
 const connect = async () => {
